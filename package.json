@@ -1,0 +1,22 @@
+{
+  "name": "profilegenerator",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tosh-skyler/profileGenerator.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/tosh-skyler/profileGenerator/issues"
+  },
+  "homepage": "https://github.com/tosh-skyler/profileGenerator#readme",
+  "dependencies": {
+    "node": "^13.8.0"
+  }
+}
