@@ -15,12 +15,29 @@ const questions = [
   }
 ];
 
-function fetchGithubData(username) {
+function fetchGithubData(username, color, starCount) {
+  const queryUrl = `https://api.github.com/users/${username}`;
+  axios.get(queryUrl).then(response => {
+    const data = response.data;
+    let user = {
+      username: data.login,
+      avatar: data.avatar_url,
+      profile: data.html_url,
+      blog: data.blog,
+      repoCount: data.public_repos,
+      name: data.name,
+      followers: data.followers,
+      followedUsers: data.following,
+      bio: data.bio,
+      location: data.location,
+      starCount,
+      color
+    };
+    console.log(user.username, JSON.stringify(user), starCount);
+  });
 }
 
-function writeToFile(fileName, data) {
- 
-}
+// function writeToFile(fileName, data) {}
 
 function init() {
   inquirer.prompt(questions).then(function(responses) {
